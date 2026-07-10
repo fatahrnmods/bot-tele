@@ -1,0 +1,17 @@
+[
+{
+"pino": {
+    "safe": true,
+    "name": "platform",
+    "timestamp": true,
+    "prettyPrint": true,
+    "serializers": {
+      "req": "pino.stdSerializers.req",
+      "res": "pino.stdSerializers.res"
+    }
+  },
+"ownerusername": "@RadhinDev",
+"unicode": {"head": "✦","arrow": "✧","body": "┃","upper": "┏","down": "┗","line": "━","wings": [ "𓆩 "," 𓆪" ],"needed": ["<",">"],"optional": ["(",")"]},
+"BotToken": "7396900177:AAEpTpsL4oyYiRQ1qiVHMlKrgiLHd-CNhkc" 
+}
+]
