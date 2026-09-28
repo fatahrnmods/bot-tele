@@ -418,7 +418,7 @@ try {
   const { exec } = require('child_process')
   const { promisify } = require('util')
   const execAsync = promisify(exec)
-  const ytdlp = '/home/awara/.local/bin/yt-dlp'
+  const ytdlp = 'yt-dlp'
   const urlData = music.find(g => g.id == iky.chat.id)
   if(!urlData) return iky.reply('Session habis, ulangi /whatmusic')
   const filename = Date.now()
@@ -444,7 +444,7 @@ try {
   const { exec } = require('child_process')
   const { promisify } = require('util')
   const execAsync = promisify(exec)
-  const ytdlp = '/home/awara/.local/bin/yt-dlp'
+  const ytdlp = 'yt-dlp'
   const urlData = music.find(g => g.id == iky.chat.id)
   if(!urlData) return iky.reply('Session habis, ulangi /whatmusic')
   const filename = Date.now()
@@ -850,7 +850,7 @@ sendsearch(bot, iky)
 iky.replyWithChatAction("upload_video")
 try {
   const { execSync } = require('child_process')
-  const ytdlp = '/home/awara/.local/bin/yt-dlp'
+  const ytdlp = 'yt-dlp'
   const filename = Date.now()
   execSync(`${ytdlp} --impersonate chrome -f "best[ext=mp4]" --recode-video mp4 -o "/tmp/${filename}.mp4" "${qe}" --retries 3`)
   await iky.replyWithChatAction("upload_video")
@@ -927,7 +927,7 @@ try {
   const { exec } = require('child_process')
   const { promisify } = require('util')
   const execAsync = promisify(exec)
-  const ytdlp = '/home/awara/.local/bin/yt-dlp'
+  const ytdlp = 'yt-dlp'
   const filename = Date.now()
   await iky.replyWithChatAction("upload_audio")
   // Download ke file lokal dulu
@@ -973,7 +973,7 @@ if(qe.length == 1){
   if(!isUrl(qe) && !qe.includes('instag')) return sendText(bot,iky,'Link Invalid')
   try {
     const { execSync } = require('child_process')
-    const ytdlp = '/home/awara/.local/bin/yt-dlp'
+    const ytdlp = 'yt-dlp'
     const filename = Date.now()
     execSync(`${ytdlp} --impersonate chrome -o "/tmp/${filename}.%(ext)s" "${qe}" --retries 3`)
     // Cek file yang didownload
@@ -1043,7 +1043,7 @@ try {
   const { exec } = require('child_process')
   const { promisify } = require('util')
   const execAsync = promisify(exec)
-  const ytdlp = '/home/awara/.local/bin/yt-dlp'
+  const ytdlp = 'yt-dlp'
   const filename = Date.now()
   await iky.replyWithChatAction("upload_video")
   // Download ke file lokal dulu
@@ -1066,7 +1066,7 @@ case 'play':
 sendsearch(bot,iky)
 try{
   const { execSync } = require('child_process')
-  const ytdlp = '/home/awara/.local/bin/yt-dlp'
+  const ytdlp = 'yt-dlp'
   yts(`${args.join(' ')}`).then(async (res) => {
     if (res.all[0].duration.seconds > 600) return iky.replyWithPhoto({
       url: res.all[0].thumbnail},{caption: `「 YOUTUBE MP3 」\n\n• Judul : ${res.all[0].title}\n• Durasi : ${res.all[0].timestamp}\n\nMaaf, Durasi video melebihi 10 Menit\nLagu Tidak akan dikirim`})
